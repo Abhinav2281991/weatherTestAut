@@ -1,0 +1,145 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 7839261000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "MasterHooks.setup()"
+            }
+          }
+        ],
+        "line": 14,
+        "name": "Validate the temperature of same city getting from open weather api and ndtv website",
+        "description": "",
+        "id": "validate-the-temperature-of-city-shown-at-ndtv-website-and-open-weather-api;validate-the-temperature-of-same-city-getting-from-open-weather-api-and-ndtv-website;;2",
+        "after": [
+          {
+            "result": {
+              "duration": 48378500,
+              "status": "passed"
+            },
+            "match": {
+              "location": "MasterHooks.tearDownAndScreenshotOnFailure(Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 27778462400,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "user redirected to ndtv website",
+            "match": {
+              "location": "GetWeatherDetail.user_redirected_to_ndtv_website()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 2324626500,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "user clicks on weather",
+            "match": {
+              "location": "GetWeatherDetail.user_clicks_on_weather()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 2785220300,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "user enter \"Chand\" name",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Chand",
+                  "offset": 12
+                }
+              ],
+              "location": "GetWeatherDetail.user_enter_name(String)"
+            },
+            "matchedColumns": [
+              0
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 4591833800,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "user check the check box for same city and get temperature of the city",
+            "match": {
+              "location": "GetWeatherDetail.user_check_the_check_box_for_same_city_and_get_temperature_of_the_city()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 2107976400,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "user call get request and get the temperature of \"Chandigarh\" with \"7fe67bf08c80ded756e598d6f8fedaea\" from open weather",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Chandigarh",
+                  "offset": 50
+                },
+                {
+                  "val": "7fe67bf08c80ded756e598d6f8fedaea",
+                  "offset": 68
+                }
+              ],
+              "location": "GetWeatherDetail.user_call_get_request_and_get_the_temperature_of_with_from_open_weather(String,String)"
+            },
+            "matchedColumns": [
+              2,
+              4
+            ],
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 102600,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "validate the temperature shown at ndtv website and open weather api is same",
+            "match": {
+              "location": "GetWeatherDetail.validate_the_temperature_shown_at_ndtv_website_and_open_weather_api_is_same()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "line": 2,
+            "name": "@regression"
+          }
+        ]
+      }
+    ],
+    "name": "Validate the temperature of city shown at ndtv website and open weather API",
+    "description": "",
+    "id": "validate-the-temperature-of-city-shown-at-ndtv-website-and-open-weather-api",
+    "keyword": "Feature",
+    "uri": "WeatherCheck.feature"
+  }
+]
